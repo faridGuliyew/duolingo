@@ -225,7 +225,10 @@ fun QuizScreen() {
         }
         //end of whole screen
     }
-    val animatedScale by animateFloatAsState(targetValue = if (showDialog) 1f else 0f, animationSpec = tween(100, easing = LinearEasing))
+    val animatedScale by animateFloatAsState(
+        targetValue = if (showDialog) 1f else 0f,
+        animationSpec = tween(100, easing = LinearEasing)
+    )
     Box(modifier = Modifier
         .fillMaxSize()
         .wrapContentSize(Alignment.BottomCenter)
@@ -243,7 +246,10 @@ fun QuizScreen() {
         Column {
             Spacer(modifier = Modifier.height(32.dp))
             if (showDialog)
-            TitleText(text = "No time for validation or animation, probably wrong answer", color = Color.White)
+                TitleText(
+                    text = "No time for validation or animation, probably wrong answer",
+                    color = Color.White
+                )
             Spacer(modifier = Modifier.height(32.dp))
             Button(
                 modifier = Modifier.fillMaxWidth(),

@@ -6,6 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.sp
 import com.example.duolingoapplication.ui.theme.museoSansFamily
 
@@ -21,12 +22,12 @@ fun TitleText(@StringRes text : Int, color : Color = Color.Black) {
 }
 
 @Composable
-fun TitleText(text : String, color : Color = Color.Black) {
+fun TitleText(text : String, color : Color = Color.Black, fontSize : TextUnit = 22.sp) {
     Text(
         text = text,
         color = color,
         fontFamily = museoSansFamily,
         fontWeight = FontWeight.ExtraBold,
-        fontSize = 22.sp
+        fontSize = fontSize
     )
 }
